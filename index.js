@@ -97,6 +97,8 @@ const CircularPicker = ({
   }
 
   const pan = PanResponder.create({
+    onStartShouldSetPanResponder: () => true,
+    onPanResponderEnd: () => true,
     onMoveShouldSetPanResponder: () => true,
     onMoveShouldSetPanResponderCapture: () => true,
     onPanResponderMove: (_, { moveX, moveY }) => {
